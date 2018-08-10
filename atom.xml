@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://byshen.github.io/"/>
-  <updated>2018-07-29T07:49:50.083Z</updated>
+  <updated>2018-08-10T23:56:35.016Z</updated>
   <id>https://byshen.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>note on &quot;PRES - Probabilistic Replay with Execution Sketching on Multiprocessors&quot;</title>
+    <link href="https://byshen.github.io/2018/08/10/pres-note/"/>
+    <id>https://byshen.github.io/2018/08/10/pres-note/</id>
+    <published>2018-08-10T17:42:44.000Z</published>
+    <updated>2018-08-10T23:56:35.016Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;What problem does the paper address?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;reproduce
+        
+      
+    
+    </summary>
+    
+    
+      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
+    
+      <category term="bug" scheme="https://byshen.github.io/tags/bug/"/>
+    
+      <category term="reproduce" scheme="https://byshen.github.io/tags/reproduce/"/>
+    
+      <category term="sosp09" scheme="https://byshen.github.io/tags/sosp09/"/>
+    
+  </entry>
   
   <entry>
     <title>Android useful links</title>
