@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://byshen.github.io/"/>
-  <updated>2018-08-14T05:25:32.529Z</updated>
+  <updated>2018-08-19T07:17:22.548Z</updated>
   <id>https://byshen.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Understanding KMP</title>
+    <link href="https://byshen.github.io/2018/08/18/kmp/"/>
+    <id>https://byshen.github.io/2018/08/18/kmp/</id>
+    <published>2018-08-19T06:10:29.000Z</published>
+    <updated>2018-08-19T07:17:22.548Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Useful links for understanding.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Understand how kmp works, &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="algorithm" scheme="https://byshen.github.io/tags/algorithm/"/>
+    
+      <category term="leetcode" scheme="https://byshen.github.io/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>Useful links for research</title>
