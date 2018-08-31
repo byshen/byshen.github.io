@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://byshen.github.io/"/>
-  <updated>2018-08-19T07:17:22.548Z</updated>
+  <updated>2018-08-31T21:53:34.396Z</updated>
   <id>https://byshen.github.io/</id>
   
   <author>
@@ -15,6 +15,89 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Characteristic study</title>
+    <link href="https://byshen.github.io/2018/08/27/characteristic-study/"/>
+    <id>https://byshen.github.io/2018/08/27/characteristic-study/</id>
+    <published>2018-08-27T18:10:29.000Z</published>
+    <updated>2018-08-31T21:53:34.396Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;What is empirical study? or characteristic study? It is a way of gaining
+        
+      
+    
+    </summary>
+    
+    
+      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
+    
+      <category term="research" scheme="https://byshen.github.io/tags/research/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Notes on &quot;learn from mistakes, a comprehensive study on real world concurrency bugs characteristics&quot;</title>
+    <link href="https://byshen.github.io/2018/08/22/paper-learn-from-mistakes/"/>
+    <id>https://byshen.github.io/2018/08/22/paper-learn-from-mistakes/</id>
+    <published>2018-08-22T22:40:23.000Z</published>
+    <updated>2018-08-27T04:52:56.113Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;What makes good characteristic study paper? Interesting findings with
+        
+      
+    
+    </summary>
+    
+    
+      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
+    
+      <category term="concurrency bug" scheme="https://byshen.github.io/tags/concurrency-bug/"/>
+    
+      <category term="characteristic study" scheme="https://byshen.github.io/tags/characteristic-study/"/>
+    
+      <category term="asplos08" scheme="https://byshen.github.io/tags/asplos08/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lessons for research</title>
+    <link href="https://byshen.github.io/2018/08/22/yylessons/"/>
+    <id>https://byshen.github.io/2018/08/22/yylessons/</id>
+    <published>2018-08-22T18:50:03.000Z</published>
+    <updated>2018-08-22T22:40:49.890Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;Paper is not writing, is your thinking. Tell a story with your logic
+        
+      
+    
+    </summary>
+    
+    
+      <category term="research" scheme="https://byshen.github.io/tags/research/"/>
+    
+      <category term="lessons" scheme="https://byshen.github.io/tags/lessons/"/>
+    
+  </entry>
   
   <entry>
     <title>Understanding KMP</title>
@@ -49,7 +132,7 @@
     <link href="https://byshen.github.io/2018/08/13/research-links/"/>
     <id>https://byshen.github.io/2018/08/13/research-links/</id>
     <published>2018-08-14T05:20:44.000Z</published>
-    <updated>2018-08-14T05:25:32.529Z</updated>
+    <updated>2018-08-28T22:13:18.155Z</updated>
     
     <summary type="html">
     
@@ -77,7 +160,7 @@
     <link href="https://byshen.github.io/2018/08/11/nachos/"/>
     <id>https://byshen.github.io/2018/08/11/nachos/</id>
     <published>2018-08-11T20:04:20.000Z</published>
-    <updated>2018-08-11T23:37:36.702Z</updated>
+    <updated>2018-08-24T05:01:50.735Z</updated>
     
     <summary type="html">
     
@@ -98,10 +181,10 @@
   
   <entry>
     <title>note on &quot;PRES - Probabilistic Replay with Execution Sketching on Multiprocessors&quot;</title>
-    <link href="https://byshen.github.io/2018/08/10/pres-note/"/>
-    <id>https://byshen.github.io/2018/08/10/pres-note/</id>
+    <link href="https://byshen.github.io/2018/08/10/paper-pres-note/"/>
+    <id>https://byshen.github.io/2018/08/10/paper-pres-note/</id>
     <published>2018-08-10T17:42:44.000Z</published>
-    <updated>2018-08-10T23:56:35.016Z</updated>
+    <updated>2018-08-22T22:41:20.945Z</updated>
     
     <summary type="html">
     

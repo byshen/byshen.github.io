@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Bingyu"><title>Characteristic study · 西窗月</title><meta name="description" content="What is empirical study? or characteristic study? It is a way of gaining knowledge by observations (empirical evidence) qualitatively or quantitativel"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div id="stage" class="container"><div class="row"><div id="side-bar" class="col-sm-3 col-xs-12 side-container invisible"><div class="vertical-text site-title"><h3 tabindex="-1" class="site-title-small"><a href="/" class="a-title">夢裏不知身是客</a></h3><h1 tabindex="-1" class="site-title-large"><a href="/" class="a-title">壹晌貪歡</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div id="site-nav" class="site-title-links"><ul><li><a href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li class="soc"><a href="https://github.com/byshen" target="_blank" rel="noopener noreferrer"><i class="fa fa-github">&nbsp;</i></a><a href="https://twitter.com/shenbingyu" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter">&nbsp;</i></a><a href="https://byshen.github.io/atom.xml" target="_blank" rel="noopener noreferrer"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2018&nbsp;<a target="_blank" href="https://byshen.github.io" rel="noopener noreferrer">Bingyu</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div id="main-container" class="col-sm-9 col-xs-12 main-container invisible"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>Characteristic study</a></p><p class="post-meta"><span class="date meta-item">發佈於&nbsp;2018-08-27</span><span class="meta-item"><i class="fa fa-comment-o"></i><span>&nbsp;</span><a href="/2018/08/27/characteristic-study/#comments">評論</a></span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a href="/tags/paper/" title="paper" class="a-tag">paper</a><span>&nbsp;</span><a href="/tags/research/" title="research" class="a-tag">research</a><span>&nbsp;</span></span></p><p class="post-abstract"><p>What is empirical study? or characteristic study? It is a way of gaining knowledge by observations (empirical evidence) <strong>qualitatively or quantitatively</strong>. With collected evidence (data), empirical questions should be answered.</p>
+<p>I read four papers of characteristic study papers in a few days, which covers from concurrency bugs[1], incorrect bug fixes[2], configuration errors[3, 4, 6], and log practices[5]. These excellent study papers cover different research themes and share something for common. Here are some notes.</p>
+<ol>
+<li><p>All these studies are done with a specific perspective. </p>
+<p> It is not just the interesting/important topic, but also the findings with a special angle to look at. [1] for concurrency bugs with bug patterns, fix strategies, and manifestation method. [2] for quantitive analysis on significance, types, patterns, reasons of incorrect fixes. [3, 4, 6] are from different perspect of configurations. [3] looks at importance, types, reactions and cause of misconfig. [4] is more about number of configuration settings, and the percentage of parameters being userd well. Based on the findings to propose that we should simplify config and improve config navigation method. [6] focus on latent config errors. [5] is all about log practices, and one interesting finding that log is modified more than other code, which give insights on improving logging practices.  </p>
+</li>
+<li><p>Structure</p>
+<p> Intro - Methodology - Perspect 1-N - Related work - Conclution</p>
+<p> First, be clear what is the problem/overall topic. It should have a strong focus. </p>
+<p> Then think about (0) significance or prevalence of this problem (1) causes/reasons for this problem, (2) types/categories of this problem, (3) characteristic for different types, (4) possible solutions discussion, can be simple to demostrate why the findings beneficial.</p>
+</li>
+</ol>
+<ol start="3">
+<li><p>Angles for permissions<br> Goal: provide insights for developers, users, policy makers! not a single app company.</p>
+<p> What is the problem?</p>
+<ul>
+<li>Incorrect permission usage by developers, how many developers require too many permissions.<ul>
+<li>How to define permissions developers should not ask for?<ul>
+<li>Permissions that is not relevant with user required functionality.</li>
+</ul>
+</li>
+<li>What if it is an app with various functions, how to derermine? If it is done by human determinination, how to do it?</li>
+</ul>
+</li>
+<li><p>Incorrect permission understanding android users, they do not understand current permission design. fine-grained vs coarse grained</p>
+<p>Small perspects</p>
+</li>
+</ul>
+<ol>
+<li>game apps tend to require more permissions, and users less care about it.<ul>
+<li>specify the number of dangerous permissions required by each app</li>
+</ul>
+</li>
+<li>the more famous the app is, the less careful people are about the permissions<ul>
+<li>relationship between number of downloads to permission granting portion.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<pre><code>What data do we have?
+- user - app - permission - grant/not 
+- app - category - permission 
+</code></pre><hr>
+<p><br><br>[1] Learning from Mistakes — A Comprehensive Study on Real World Concurrency Bug Characteristics, ASPLOS’08<br>[2] How Do Fixes Become Bugs? – A Comprehensive Characteristic Study on Incorrect Fixes in Commercial and Open Source Operating Systems, FSE’11, best paper<br>[3] An Empirical Study on Configuration Errors in Commercial and Open Source Systems, SOSP’11<br>[4] Hey, You Have Given Me Too Many Knobs! Understanding and Dealing with Over-Designed Configuration in System Software, FSE’15<br>[5] Characterizing Logging Practices in Open-Source Software, ICSE’12<br>[6] Early Detection of Configuration Errors to Reduce Failure Damage, OSDI’16 <a href="https://blog.acolyer.org/2016/11/29/early-detection-of-configuration-errors-to-reduce-failure-damage/" target="_blank" rel="noopener">morning paper</a></p>
+</p></div><div class="share"><span>分享到</span>&nbsp;<span class="soc"><a href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank" class="fa fa-bookmark"></a></span><span class="soc"><a href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));" class="fa fa-weibo"></a></span><span class="soc"><a href="http://twitter.com/home?status=https://byshen.github.io/2018/08/27/characteristic-study/%20西窗月%20Characteristic study" class="fa fa-twitter"></a></span></div><div class="pagination"><p class="clearfix"><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/2018/08/22/paper-learn-from-mistakes/" title="Notes on &quot;learn from mistakes, a comprehensive study on real world concurrency bugs characteristics&quot;">下一篇: Notes on "learn from mistakes, a comprehensive study on real world concurrency bugs characteristics"&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div><a id="comments"></a><div id="disqus_thread"></div><script>var disqus_shortname = 'sbygithub';
+var disqus_identifier = '2018/08/27/characteristic-study/';
+var disqus_title = 'Characteristic study';
+var disqus_url = 'https://byshen.github.io/2018/08/27/characteristic-study/';
+(function () {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//sbygithub.disqus.com/count.js" async></script></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2018&nbsp;<a target="_blank" href="https://byshen.github.io" rel="noopener noreferrer">Bingyu</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/google-analytics.js"></script><script src="/js/typography.js"></script></body></html>
