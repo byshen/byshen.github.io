@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://byshen.github.io/"/>
-  <updated>2018-08-31T21:53:34.396Z</updated>
+  <updated>2018-11-25T22:24:06.368Z</updated>
   <id>https://byshen.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Disjoint-set (union find)</title>
+    <link href="https://byshen.github.io/2018/11/25/union-find/"/>
+    <id>https://byshen.github.io/2018/11/25/union-find/</id>
+    <published>2018-11-25T19:50:03.000Z</published>
+    <updated>2018-11-25T22:24:06.368Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Union&quot;&gt;&lt;a href=&quot;#Union&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://byshen.github.io/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>Characteristic study</title>
@@ -36,9 +60,9 @@
     </summary>
     
     
-      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
-    
       <category term="research" scheme="https://byshen.github.io/tags/research/"/>
+    
+      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
     
   </entry>
   
@@ -73,11 +97,11 @@
   </entry>
   
   <entry>
-    <title>Lessons for research</title>
+    <title>Research advice</title>
     <link href="https://byshen.github.io/2018/08/22/yylessons/"/>
     <id>https://byshen.github.io/2018/08/22/yylessons/</id>
     <published>2018-08-22T18:50:03.000Z</published>
-    <updated>2018-08-22T22:40:49.890Z</updated>
+    <updated>2018-11-25T22:12:33.340Z</updated>
     
     <summary type="html">
     
@@ -160,7 +184,7 @@
     <link href="https://byshen.github.io/2018/08/11/nachos/"/>
     <id>https://byshen.github.io/2018/08/11/nachos/</id>
     <published>2018-08-11T20:04:20.000Z</published>
-    <updated>2018-08-24T05:01:50.735Z</updated>
+    <updated>2018-09-10T22:05:57.013Z</updated>
     
     <summary type="html">
     
