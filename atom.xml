@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://byshen.github.io/"/>
-  <updated>2018-11-25T22:24:06.368Z</updated>
+  <updated>2019-01-28T03:43:24.199Z</updated>
   <id>https://byshen.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>不插电学习法</title>
+    <link href="https://byshen.github.io/2019/01/27/unplug-learning/"/>
+    <id>https://byshen.github.io/2019/01/27/unplug-learning/</id>
+    <published>2019-01-28T03:22:31.000Z</published>
+    <updated>2019-01-28T03:43:24.199Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;可能是由于自己本科时经常去图书馆养成的学习习惯，发现自己在安静的、&lt;strong&gt;大家都在学习的&lt;/strong&gt;环境下效率会更高。如果处于一个封闭的独处
+        
+      
+    
+    </summary>
+    
+    
+      <category term="research" scheme="https://byshen.github.io/tags/research/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Disjoint-set (union find)</title>
     <link href="https://byshen.github.io/2018/11/25/union-find/"/>
     <id>https://byshen.github.io/2018/11/25/union-find/</id>
     <published>2018-11-25T19:50:03.000Z</published>
-    <updated>2018-11-25T22:24:06.368Z</updated>
+    <updated>2018-11-26T17:43:29.113Z</updated>
     
     <summary type="html">
     
