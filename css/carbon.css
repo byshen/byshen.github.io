@@ -35,7 +35,7 @@ a:hover {
 }
 .highlight .line {
   height: 1.5rem;
-  font-family: Consolas, 'Source Code Pro', 'DejaVu Sans Mono', 'Droid Sans Mono', Menlo, Monaco, 'Lucida Console', 'Courier', monoscape;
+  font-family: Consolas, Menlo, Monaco, 'Source Code Pro', 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', 'Courier', monoscape;
 }
 .highlight pre {
   border: none;
@@ -209,7 +209,7 @@ pre .javascript .function {
   display: none;
 }
 #content .article-content {
-  font-family: lato;
+  font-family: 'Lato', "Palatino Linotype", "Book Antiqua", Palatino, serif;
   line-height: 1.5;
   padding-top: 0.5rem;
 }
