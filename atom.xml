@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://byshen.github.io/"/>
-  <updated>2019-01-28T03:43:24.199Z</updated>
+  <updated>2019-03-10T04:08:37.859Z</updated>
   <id>https://byshen.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to write a paper?</title>
+    <link href="https://byshen.github.io/2019/03/06/how-to-write-a-paper/"/>
+    <id>https://byshen.github.io/2019/03/06/how-to-write-a-paper/</id>
+    <published>2019-03-07T07:12:35.000Z</published>
+    <updated>2019-03-10T04:08:37.859Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;First sentence of each paragraph is the most
+        
+      
+    
+    </summary>
+    
+    
+      <category term="research" scheme="https://byshen.github.io/tags/research/"/>
+    
+      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>不插电学习法</title>
@@ -91,11 +118,11 @@
   </entry>
   
   <entry>
-    <title>Notes on &quot;learn from mistakes, a comprehensive study on real world concurrency bugs characteristics&quot;</title>
+    <title>Notes on &quot;learn from mistakes&quot;</title>
     <link href="https://byshen.github.io/2018/08/22/paper-learn-from-mistakes/"/>
     <id>https://byshen.github.io/2018/08/22/paper-learn-from-mistakes/</id>
     <published>2018-08-22T22:40:23.000Z</published>
-    <updated>2018-08-27T04:52:56.113Z</updated>
+    <updated>2019-03-07T18:02:13.440Z</updated>
     
     <summary type="html">
     
@@ -176,11 +203,11 @@
   </entry>
   
   <entry>
-    <title>Useful links for research</title>
+    <title>Wiki Links</title>
     <link href="https://byshen.github.io/2018/08/13/research-links/"/>
     <id>https://byshen.github.io/2018/08/13/research-links/</id>
     <published>2018-08-14T05:20:44.000Z</published>
-    <updated>2018-08-28T22:13:18.155Z</updated>
+    <updated>2019-03-07T18:02:20.805Z</updated>
     
     <summary type="html">
     
@@ -188,7 +215,7 @@
       
         
         
-          &lt;h1 id=&quot;Useful-links&quot;&gt;&lt;a href=&quot;#Useful-links&quot; class=&quot;headerlink&quot; title=&quot;Useful
+          &lt;h1 id=&quot;Links&quot;&gt;&lt;a href=&quot;#Links&quot; class=&quot;headerlink&quot;
         
       
     
@@ -228,11 +255,11 @@
   </entry>
   
   <entry>
-    <title>note on &quot;PRES - Probabilistic Replay with Execution Sketching on Multiprocessors&quot;</title>
+    <title>note on &quot;PRES&quot; paper</title>
     <link href="https://byshen.github.io/2018/08/10/paper-pres-note/"/>
     <id>https://byshen.github.io/2018/08/10/paper-pres-note/</id>
     <published>2018-08-10T17:42:44.000Z</published>
-    <updated>2018-08-22T22:41:20.945Z</updated>
+    <updated>2019-03-07T07:26:02.807Z</updated>
     
     <summary type="html">
     
