@@ -2,7 +2,7 @@
   max-width: 100%;
 }
 body {
-  font-size: 22px;
+  font-size: 20px;
   font-family: 'Open Sans', 'Droid Sans', 'Source Sans Pro', 'Helvetica Neue', 'Segoe UI', Verdana, Tahoma, Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
 }
 ol {
@@ -20,11 +20,11 @@ a:hover {
   color: #6495ed;
 }
 .highlight {
-  background: #2d2d2d;
+  background: #f2f2f2;
   border-style: solid;
   border-width: 1px 0;
   overflow: auto;
-  color: #ccc;
+  color: #404040;
   padding: 0.5rem;
   vertical-align: baseline;
 /*line-height font-size * line-height*/
@@ -35,7 +35,7 @@ a:hover {
 }
 .highlight .line {
   height: 1.5rem;
-  font-family: 'Source Code Pro', 'DejaVu Sans Mono', 'Droid Sans Mono', Menlo, Consolas, Monaco, 'Lucida Console', 'Courier', monoscape;
+  font-family: Consolas, 'Source Code Pro', 'DejaVu Sans Mono', 'Droid Sans Mono', Menlo, Monaco, 'Lucida Console', 'Courier', monoscape;
 }
 .highlight pre {
   border: none;
@@ -67,7 +67,7 @@ a:hover {
 .gist {
   border-style: solid;
   border-width: 1px 0;
-  background: #2d2d2d;
+  background: #f2f2f2;
 }
 .gist .gist-file {
   border: none;
@@ -91,7 +91,7 @@ a:hover {
   border: none;
 }
 .gist .gist-file .gist-meta {
-  background: #2d2d2d;
+  background: #f2f2f2;
   color: #999;
   text-shadow: 0 0;
   padding: 0;
@@ -209,7 +209,7 @@ pre .javascript .function {
   display: none;
 }
 #content .article-content {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: lato;
   line-height: 1.5;
   padding-top: 0.5rem;
 }
@@ -224,7 +224,7 @@ pre .javascript .function {
 #content .article-content a {
   padding-left: 0.3rem;
   padding-right: 0.3rem;
-  color: #495a80;
+  color: #426bf4;
 }
 #content .article-content a:hover {
   color: #6495ed;
