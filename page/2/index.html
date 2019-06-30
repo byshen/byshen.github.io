@@ -96,6 +96,78 @@ ga('send', 'pageview');
         <div class="col-sm-8 blog-main">
           
   
+    <article id="post-nachos" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/11/nachos/">nachos project notes</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2018/08/11/nachos/" class="article-date"><time datetime="2018-08-11T20:04:20.000Z" itemprop="datePublished">2018-08-11</time></a>
+</div>
+
+    
+    
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="proj0"><a href="#proj0" class="headerlink" title="proj0"></a>proj0</h2><p>Just find and replace… It is better to read the code through though.</p>
+<h2 id="proj1"><a href="#proj1" class="headerlink" title="proj1"></a>proj1</h2><h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h3><p>In <code>alarm.java</code>, make current thread wait for some interval. Just need an external structure to store the thread according to the priority. And in <code>timerInterrupt()</code> to wake them up if current time is larger than the designated time for each thread.</p>
+<p>Note that the structure involves read and write at the same time, need to disable interrupt before handle it, or use some concurrent structure maybe.</p>
+<h3 id="1-2"><a href="#1-2" class="headerlink" title="1.2"></a>1.2</h3><p>Need to has an external variable to record in which thread the join has been called. And a counter to record how many times has been called. But this is too cumbersome, since it involves atomicity. Maybe just test whether the join thread has been set or not.</p>
+<h3 id="1-3"><a href="#1-3" class="headerlink" title="1.3"></a>1.3</h3><p><code>Condition.java</code> implements conditional variable (CV) using semaphores. Just open <code>Semaphore.java</code> and copy paste all the code into <code>Condition2.java</code>… Just kidding. Basicly, you do the samething. Use a simpler interrupt on a wait queue for threads trying to get the conditional variables. Think about that, when you <code>wait</code> (<code>sleep</code>) on some variables in one thread, need to put this thread into the wait queue. When others finished (call <code>wake</code>), then make this thread ready. Done.</p>
+<p>Wait… Is that simple? What is the relationship with <code>lock</code>? Each CV has a lock. When <code>wait</code> (<code>sleep</code>) for some CV, you need first release the lock, let next thread <code>N</code> on the wait queue for the lock be ready. Then let the current thread <code>C</code> to sleep, put <code>C</code> on the wait queue for the conditional variable. Then let <code>N</code> acquire the lock, and do things.</p>
+<p>It is a little complicated… Let’s think it fundementally. CV is a high level of synchronize primitive, which combines Lock with signal process. When you release the lock, you also <code>signal</code> others you are free. Put others on the wait queue for the lock to be ready. So when you wait for the conditional variables, you do not need to constantly check if the lock is free. Instead, you use a signal procedure to avoid this spinning waiting. Here is a helpful stack overflow link. <a href="https://stackoverflow.com/questions/1055398/differences-between-conditional-variables-mutexes-and-locks" target="_blank" rel="noopener">differences-between-conditional-variables-mutexes-and-locks</a></p>
+<h3 id="1-4"><a href="#1-4" class="headerlink" title="1.4"></a>1.4</h3><p>Geoff’s homework is GameMatch, which is really geoff style. It does basicly the samething for locks and conditions. First <code>N-1</code> players are waiting, then the <code>N</code>th player comes to wake them all, and increase the match counter. The description is not so clear, so I assume it is first come, first serve order. However it is hard for testing if there are multiple rounds of matches.</p>
+<h2 id="proj-2"><a href="#proj-2" class="headerlink" title="proj 2"></a>proj 2</h2><p>Since it involves <code>mips gcc</code> which can not run on my stupid macintosh, I switch to the ubuntu on my pc.</p>
+<h3 id="2-1-file-system-calls"><a href="#2-1-file-system-calls" class="headerlink" title="2.1 file system calls"></a>2.1 file system calls</h3><p>Implement calls <code>creat</code>, <code>open</code>, <code>read</code>, <code>write</code>, <code>close</code>, and <code>unlink</code>, as specified in <code>test/syscall.h</code>.</p>
+<p>Let’s do it step by step. Startring from the simple ones.</p>
+<p>Personally I feel <code>open</code>, <code>close</code> are the simplest ones, from the length of description lol. You need to create a file descriptor table, to hold the <code>fd</code>. size is specified as 16. To read the file name, your need to call APIs, like <code>readVirtualMemoryString</code> in <code>UserProcess</code>.</p>
+<p><code>read()</code>, <code>write</code> should consider many corner cases; like what if read failed, or read only 0 byte, which might be failure, or just no read. ?</p>
+<p><code>unlink()</code>: let fs handle the problem of multiple open files</p>
+<h3 id="support-multiprogramming"><a href="#support-multiprogramming" class="headerlink" title="support multiprogramming"></a>support multiprogramming</h3><p>questions:</p>
+<ol>
+<li>what should be done, if there is not enough page for the process? My current solution is to allocate pages one by one, if receives an error in the process, free all allocated pages for the process.</li>
+<li></li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] <a href="https://people.eecs.berkeley.edu/~kubitron/courses/cs162-F05/Nachos/index.html" target="_blank" rel="noopener">Nachos related document</a>. Especially <a href="https://people.eecs.berkeley.edu/~kubitron/courses/cs162-F05/Nachos/doc/index.html" target="_blank" rel="noopener">nachos javadoc</a> for walk through the APIs.</p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="https://byshen.github.io/2018/08/11/nachos/" data-id="cjxijysbf000am58gsfea9u9h" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nachos/">nachos</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-paper-pres-note" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
@@ -179,7 +251,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/10/paper-pres-note/" data-id="cjx9knkwz000ch78gxj3fyqhu" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/10/paper-pres-note/" data-id="cjxijysbm000hm58gcdj74kxz" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -238,7 +310,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/07/28/android-develop/" data-id="cjx9knkwj0003h78gtosqauzx" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/07/28/android-develop/" data-id="cjxijysb50003m58gdxl0uewf" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -299,7 +371,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/07/28/hello-world/" data-id="cjx9knkwa0000h78g2n9njxk3" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/07/28/hello-world/" data-id="cjxijysax0000m58gt2vaks0o" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -330,6 +402,10 @@ ga('send', 'pageview');
     <ul class="sidebar-module-list">
       
         <li>
+          <a href="/2019/06/29/iphone-to-android/">Switching from iPhone to Android</a>
+        </li>
+      
+        <li>
           <a href="/2019/06/18/mexico-for-visa/">墨西哥续签</a>
         </li>
       
@@ -345,10 +421,6 @@ ga('send', 'pageview');
           <a href="/2018/11/25/union-find/">Disjoint-set (union find)</a>
         </li>
       
-        <li>
-          <a href="/2018/08/27/characteristic-study/">Characteristic study</a>
-        </li>
-      
     </ul>
   </div>
 
@@ -357,7 +429,7 @@ ga('send', 'pageview');
   <div class="sidebar-module">
     <h4>Tag Cloud</h4>
     <p class="tagcloud">
-      <a href="/tags/Mexico/" style="font-size: 10px;">Mexico</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/asplos08/" style="font-size: 10px;">asplos08</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/bug/" style="font-size: 10px;">bug</a> <a href="/tags/characteristic-study/" style="font-size: 10px;">characteristic study</a> <a href="/tags/concurrency-bug/" style="font-size: 10px;">concurrency bug</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/lessons/" style="font-size: 10px;">lessons</a> <a href="/tags/links/" style="font-size: 10px;">links</a> <a href="/tags/nachos/" style="font-size: 10px;">nachos</a> <a href="/tags/paper/" style="font-size: 16.67px;">paper</a> <a href="/tags/personal/" style="font-size: 10px;">personal</a> <a href="/tags/reproduce/" style="font-size: 10px;">reproduce</a> <a href="/tags/research/" style="font-size: 20px;">research</a> <a href="/tags/sosp09/" style="font-size: 10px;">sosp09</a> <a href="/tags/visa/" style="font-size: 10px;">visa</a>
+      <a href="/tags/Mexico/" style="font-size: 10px;">Mexico</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/android/" style="font-size: 13.33px;">android</a> <a href="/tags/asplos08/" style="font-size: 10px;">asplos08</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/bug/" style="font-size: 10px;">bug</a> <a href="/tags/characteristic-study/" style="font-size: 10px;">characteristic study</a> <a href="/tags/concurrency-bug/" style="font-size: 10px;">concurrency bug</a> <a href="/tags/iphone/" style="font-size: 10px;">iphone</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/lessons/" style="font-size: 10px;">lessons</a> <a href="/tags/links/" style="font-size: 10px;">links</a> <a href="/tags/nachos/" style="font-size: 10px;">nachos</a> <a href="/tags/paper/" style="font-size: 16.67px;">paper</a> <a href="/tags/personal/" style="font-size: 10px;">personal</a> <a href="/tags/reproduce/" style="font-size: 10px;">reproduce</a> <a href="/tags/research/" style="font-size: 20px;">research</a> <a href="/tags/sosp09/" style="font-size: 10px;">sosp09</a> <a href="/tags/visa/" style="font-size: 10px;">visa</a>
     </p>
   </div>
 
@@ -368,7 +440,7 @@ ga('send', 'pageview');
   
   <div class="sidebar-module">
     <h4>Tags</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/Mexico/">Mexico</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/android/">android</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/asplos08/">asplos08</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/blog/">blog</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/bug/">bug</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/characteristic-study/">characteristic study</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/concurrency-bug/">concurrency bug</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/leetcode/">leetcode</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/lessons/">lessons</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/links/">links</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/nachos/">nachos</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/paper/">paper</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/personal/">personal</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/reproduce/">reproduce</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/research/">research</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sosp09/">sosp09</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/visa/">visa</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/Mexico/">Mexico</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/android/">android</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/asplos08/">asplos08</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/blog/">blog</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/bug/">bug</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/characteristic-study/">characteristic study</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/concurrency-bug/">concurrency bug</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/iphone/">iphone</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/leetcode/">leetcode</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/lessons/">lessons</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/links/">links</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/nachos/">nachos</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/paper/">paper</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/personal/">personal</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/reproduce/">reproduce</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/research/">research</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sosp09/">sosp09</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/visa/">visa</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -376,7 +448,7 @@ ga('send', 'pageview');
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/06/">June 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/03/">March 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/01/">January 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/11/">November 2018</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/08/">August 2018</a><span class="sidebar-module-list-count">7</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/07/">July 2018</a><span class="sidebar-module-list-count">2</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/06/">June 2019</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/03/">March 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/01/">January 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/11/">November 2018</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/08/">August 2018</a><span class="sidebar-module-list-count">7</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/07/">July 2018</a><span class="sidebar-module-list-count">2</span></li></ul>
   </div>
 
 
