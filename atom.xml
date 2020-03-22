@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://byshen.github.io/"/>
-  <updated>2020-03-22T04:06:14.846Z</updated>
+  <updated>2020-03-22T05:19:28.863Z</updated>
   <id>https://byshen.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>听爸爸的话</title>
+    <link href="https://byshen.github.io/2020/03/21/%E5%90%AC%E7%88%B8%E7%88%B8%E7%9A%84%E8%AF%9D/"/>
+    <id>https://byshen.github.io/2020/03/21/听爸爸的话/</id>
+    <published>2020-03-22T04:07:36.000Z</published>
+    <updated>2020-03-22T05:19:28.863Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天和家人视频的时候，我问了我爸爸一个问题：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你觉得你这辈子遇到的最难的事是什么？&lt;/p&gt;
+&lt;/blockquot
+        
+      
+    
+    </summary>
+    
+    
+      <category term="life" scheme="https://byshen.github.io/tags/life/"/>
+    
+  </entry>
   
   <entry>
     <title>Intern Life in the Bay Area</title>
@@ -116,9 +143,9 @@
     </summary>
     
     
-      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
-    
       <category term="research" scheme="https://byshen.github.io/tags/research/"/>
+    
+      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
     
   </entry>
   
@@ -190,9 +217,9 @@
     </summary>
     
     
-      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
-    
       <category term="research" scheme="https://byshen.github.io/tags/research/"/>
+    
+      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
     
   </entry>
   
