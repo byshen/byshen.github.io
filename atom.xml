@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://byshen.github.io/"/>
-  <updated>2019-06-30T06:48:23.196Z</updated>
+  <updated>2020-03-22T04:06:14.846Z</updated>
   <id>https://byshen.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Intern Life in the Bay Area</title>
+    <link href="https://byshen.github.io/2019/09/15/Intern-in-the-Bay-Area/"/>
+    <id>https://byshen.github.io/2019/09/15/Intern-in-the-Bay-Area/</id>
+    <published>2019-09-15T20:33:28.000Z</published>
+    <updated>2020-03-22T04:06:14.846Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;I worked in the bay area for a cloud database team in the last 12 weeks. It
+        
+      
+    
+    </summary>
+    
+    
+      <category term="internship" scheme="https://byshen.github.io/tags/internship/"/>
+    
+  </entry>
   
   <entry>
     <title>Switching from iPhone to Android</title>
