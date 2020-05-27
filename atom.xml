@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://byshen.github.io/"/>
-  <updated>2020-03-22T05:19:28.863Z</updated>
+  <updated>2020-05-27T22:26:17.244Z</updated>
   <id>https://byshen.github.io/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的爷爷</title>
+    <link href="https://byshen.github.io/2020/05/27/%E6%88%91%E7%9A%84%E7%88%B7%E7%88%B7/"/>
+    <id>https://byshen.github.io/2020/05/27/我的爷爷/</id>
+    <published>2020-05-27T20:44:30.000Z</published>
+    <updated>2020-05-27T22:26:17.244Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我亲爱的爷爷今天走了，去天上陪奶奶了。&lt;/p&gt;
+&lt;p&gt;小学时候的记忆已经模糊不清了，&lt;br&gt;我只记得每年到过年的时候，&lt;br&gt;爷爷让我们把老师发的奖状拿回
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Some notes on ASPLOS&#39;20</title>
+    <link href="https://byshen.github.io/2020/04/03/asplos20/"/>
+    <id>https://byshen.github.io/2020/04/03/asplos20/</id>
+    <published>2020-04-03T22:09:35.000Z</published>
+    <updated>2020-04-07T04:57:42.761Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;NVM&lt;br&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>听爸爸的话</title>
