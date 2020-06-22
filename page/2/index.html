@@ -96,6 +96,103 @@ ga('send', 'pageview');
         <div class="col-sm-8 blog-main">
           
   
+    <article id="post-characteristic-study" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/27/characteristic-study/">Characteristic study</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2018/08/27/characteristic-study/" class="article-date"><time datetime="2018-08-27T18:10:29.000Z" itemprop="datePublished">2018-08-27</time></a>
+</div>
+
+    
+    
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>What is empirical study? or characteristic study? It is a way of gaining knowledge by observations (empirical evidence) <strong>qualitatively or quantitatively</strong>. With collected evidence (data), empirical questions should be answered.</p>
+<p>I read four papers of characteristic study papers in a few days, which covers from concurrency bugs[1], incorrect bug fixes[2], configuration errors[3, 4, 6], and log practices[5]. These excellent study papers cover different research themes and share something for common. Here are some notes.</p>
+<ol>
+<li><p>All these studies are done with a specific perspective. </p>
+<p> It is not just the interesting/important topic, but also the findings with a special angle to look at. [1] for concurrency bugs with bug patterns, fix strategies, and manifestation method. [2] for quantitive analysis on significance, types, patterns, reasons of incorrect fixes. [3, 4, 6] are from different perspect of configurations. [3] looks at importance, types, reactions and cause of misconfig. [4] is more about number of configuration settings, and the percentage of parameters being userd well. Based on the findings to propose that we should simplify config and improve config navigation method. [6] focus on latent config errors. [5] is all about log practices, and one interesting finding that log is modified more than other code, which give insights on improving logging practices.  </p>
+</li>
+<li><p>Structure</p>
+<p> Intro - Methodology - Perspect 1-N - Related work - Conclution</p>
+<p> First, be clear what is the problem/overall topic. It should have a strong focus. </p>
+<p> Then think about (0) significance or prevalence of this problem (1) causes/reasons for this problem, (2) types/categories of this problem, (3) characteristic for different types, (4) possible solutions discussion, can be simple to demostrate why the findings beneficial.</p>
+</li>
+</ol>
+<ol start="3">
+<li><p>Angles for permissions<br> Goal: provide insights for developers, users, policy makers! not a single app company.</p>
+<p> What is the problem?</p>
+<ul>
+<li>Incorrect permission usage by developers, how many developers require too many permissions.<ul>
+<li>How to define permissions developers should not ask for?<ul>
+<li>Permissions that is not relevant with user required functionality.</li>
+</ul>
+</li>
+<li>What if it is an app with various functions, how to derermine? If it is done by human determinination, how to do it?</li>
+</ul>
+</li>
+<li><p>Incorrect permission understanding android users, they do not understand current permission design. fine-grained vs coarse grained</p>
+<p>Small perspects</p>
+</li>
+</ul>
+<ol>
+<li>game apps tend to require more permissions, and users less care about it.<ul>
+<li>specify the number of dangerous permissions required by each app</li>
+</ul>
+</li>
+<li>the more famous the app is, the less careful people are about the permissions<ul>
+<li>relationship between number of downloads to permission granting portion.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<pre><code>What data do we have?
+- user - app - permission - grant/not 
+- app - category - permission 
+</code></pre><hr>
+<p><br><br>[1] Learning from Mistakes — A Comprehensive Study on Real World Concurrency Bug Characteristics, ASPLOS’08<br>[2] How Do Fixes Become Bugs? – A Comprehensive Characteristic Study on Incorrect Fixes in Commercial and Open Source Operating Systems, FSE’11, best paper<br>[3] An Empirical Study on Configuration Errors in Commercial and Open Source Systems, SOSP’11<br>[4] Hey, You Have Given Me Too Many Knobs! Understanding and Dealing with Over-Designed Configuration in System Software, FSE’15<br>[5] Characterizing Logging Practices in Open-Source Software, ICSE’12<br>[6] Early Detection of Configuration Errors to Reduce Failure Damage, OSDI’16 <a href="https://blog.acolyer.org/2016/11/29/early-detection-of-configuration-errors-to-reduce-failure-damage/" target="_blank" rel="noopener">morning paper</a></p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="https://byshen.github.io/2018/08/27/characteristic-study/" data-id="ckbq4phs70006dl8gm1swebbc" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/paper/">paper</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/research/">research</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-paper-learn-from-mistakes" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
@@ -152,7 +249,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/22/paper-learn-from-mistakes/" data-id="ckapvrmgf000g3z8gf8iazl6f" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/22/paper-learn-from-mistakes/" data-id="ckbq4phsr000odl8gisffbcq2" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -208,7 +305,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/22/yylessons/" data-id="ckapvrmgl000o3z8g0cibowxr" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/22/yylessons/" data-id="ckbq4phsu000rdl8gnwi27uop" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -268,7 +365,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/18/kmp/" data-id="ckapvrmg7000a3z8gldeklqve" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/18/kmp/" data-id="ckbq4phsb000adl8gk7tobr5m" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -370,7 +467,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/13/research-links/" data-id="ckapvrmgj000l3z8g0krqu7oo" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/13/research-links/" data-id="ckbq4phso000jdl8gg5t5x0to" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -442,7 +539,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/11/nachos/" data-id="ckapvrmgg000h3z8gzasahva2" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/11/nachos/" data-id="ckbq4phsl000hdl8g2z494sxs" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -541,7 +638,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/10/paper-pres-note/" data-id="ckapvrmgi000j3z8gfjjhujnh" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/10/paper-pres-note/" data-id="ckbq4phsp000ldl8ghl5hv8o1" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -600,7 +697,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/07/28/android-develop/" data-id="ckapvrmfw00023z8g91eru2i4" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/07/28/android-develop/" data-id="ckbq4phrv0001dl8gkpiil122" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -671,7 +768,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/07/28/hello-world/" data-id="ckapvrmg300063z8gpmygfdty" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/07/28/hello-world/" data-id="ckbq4phs00002dl8gdfugffiz" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -709,6 +806,10 @@ ga('send', 'pageview');
     <ul class="sidebar-module-list">
       
         <li>
+          <a href="/2020/06/21/reflect-on-paper-submission/">一些论文笔记</a>
+        </li>
+      
+        <li>
           <a href="/2020/05/27/我的爷爷/">我的爷爷</a>
         </li>
       
@@ -724,10 +825,6 @@ ga('send', 'pageview');
           <a href="/2019/09/15/Intern-in-the-Bay-Area/">Intern Life in the Bay Area</a>
         </li>
       
-        <li>
-          <a href="/2019/06/29/iphone-to-android/">Switching from iPhone to Android</a>
-        </li>
-      
     </ul>
   </div>
 
@@ -736,7 +833,7 @@ ga('send', 'pageview');
   <div class="sidebar-module">
     <h4>Tag Cloud</h4>
     <p class="tagcloud">
-      <a href="/tags/Mexico/" style="font-size: 10px;">Mexico</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/asplos08/" style="font-size: 10px;">asplos08</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/bug/" style="font-size: 10px;">bug</a> <a href="/tags/characteristic-study/" style="font-size: 10px;">characteristic study</a> <a href="/tags/concurrency-bug/" style="font-size: 10px;">concurrency bug</a> <a href="/tags/internship/" style="font-size: 10px;">internship</a> <a href="/tags/iphone/" style="font-size: 10px;">iphone</a> <a href="/tags/leetcode/" style="font-size: 15px;">leetcode</a> <a href="/tags/lessons/" style="font-size: 10px;">lessons</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/links/" style="font-size: 10px;">links</a> <a href="/tags/nachos/" style="font-size: 10px;">nachos</a> <a href="/tags/paper/" style="font-size: 20px;">paper</a> <a href="/tags/personal/" style="font-size: 10px;">personal</a> <a href="/tags/reproduce/" style="font-size: 10px;">reproduce</a> <a href="/tags/research/" style="font-size: 20px;">research</a> <a href="/tags/sosp09/" style="font-size: 10px;">sosp09</a> <a href="/tags/visa/" style="font-size: 10px;">visa</a>
+      <a href="/tags/Mexico/" style="font-size: 10px;">Mexico</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/asplos08/" style="font-size: 10px;">asplos08</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/bug/" style="font-size: 10px;">bug</a> <a href="/tags/characteristic-study/" style="font-size: 10px;">characteristic study</a> <a href="/tags/concurrency-bug/" style="font-size: 10px;">concurrency bug</a> <a href="/tags/internship/" style="font-size: 10px;">internship</a> <a href="/tags/iphone/" style="font-size: 10px;">iphone</a> <a href="/tags/leetcode/" style="font-size: 15px;">leetcode</a> <a href="/tags/lessons/" style="font-size: 10px;">lessons</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/links/" style="font-size: 10px;">links</a> <a href="/tags/nachos/" style="font-size: 10px;">nachos</a> <a href="/tags/paper/" style="font-size: 20px;">paper</a> <a href="/tags/paper-reflection/" style="font-size: 10px;">paper, reflection</a> <a href="/tags/personal/" style="font-size: 10px;">personal</a> <a href="/tags/reproduce/" style="font-size: 10px;">reproduce</a> <a href="/tags/research/" style="font-size: 20px;">research</a> <a href="/tags/sosp09/" style="font-size: 10px;">sosp09</a> <a href="/tags/visa/" style="font-size: 10px;">visa</a>
     </p>
   </div>
 
@@ -747,7 +844,7 @@ ga('send', 'pageview');
   
   <div class="sidebar-module">
     <h4>Tags</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/Mexico/">Mexico</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/android/">android</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/asplos08/">asplos08</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/blog/">blog</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/bug/">bug</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/characteristic-study/">characteristic study</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/concurrency-bug/">concurrency bug</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/internship/">internship</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/iphone/">iphone</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/leetcode/">leetcode</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/lessons/">lessons</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/life/">life</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/links/">links</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/nachos/">nachos</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/paper/">paper</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/personal/">personal</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/reproduce/">reproduce</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/research/">research</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sosp09/">sosp09</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/visa/">visa</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/Mexico/">Mexico</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/android/">android</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/asplos08/">asplos08</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/blog/">blog</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/bug/">bug</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/characteristic-study/">characteristic study</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/concurrency-bug/">concurrency bug</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/internship/">internship</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/iphone/">iphone</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/leetcode/">leetcode</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/lessons/">lessons</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/life/">life</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/links/">links</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/nachos/">nachos</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/paper/">paper</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/paper-reflection/">paper, reflection</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/personal/">personal</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/reproduce/">reproduce</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/research/">research</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sosp09/">sosp09</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/visa/">visa</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -755,7 +852,7 @@ ga('send', 'pageview');
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/05/">May 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/04/">April 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/03/">March 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/09/">September 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/06/">June 2019</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/03/">March 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/01/">January 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/11/">November 2018</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/08/">August 2018</a><span class="sidebar-module-list-count">7</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/07/">July 2018</a><span class="sidebar-module-list-count">2</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/06/">June 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/05/">May 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/04/">April 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/03/">March 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/09/">September 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/06/">June 2019</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/03/">March 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/01/">January 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/11/">November 2018</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/08/">August 2018</a><span class="sidebar-module-list-count">7</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/07/">July 2018</a><span class="sidebar-module-list-count">2</span></li></ul>
   </div>
 
 
