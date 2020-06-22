@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://byshen.github.io/"/>
-  <updated>2020-06-22T06:41:12.248Z</updated>
+  <updated>2020-06-22T17:23:59.055Z</updated>
   <id>https://byshen.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>一些论文笔记</title>
+    <title>一些论文 Tips</title>
     <link href="https://byshen.github.io/2020/06/21/reflect-on-paper-submission/"/>
     <id>https://byshen.github.io/2020/06/21/reflect-on-paper-submission/</id>
     <published>2020-06-22T06:33:55.000Z</published>
-    <updated>2020-06-22T06:41:12.248Z</updated>
+    <updated>2020-06-22T17:23:59.055Z</updated>
     
     <summary type="html">
     
@@ -216,9 +216,9 @@
     </summary>
     
     
-      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
-    
       <category term="research" scheme="https://byshen.github.io/tags/research/"/>
+    
+      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
     
   </entry>
   
@@ -290,9 +290,9 @@
     </summary>
     
     
-      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
-    
       <category term="research" scheme="https://byshen.github.io/tags/research/"/>
+    
+      <category term="paper" scheme="https://byshen.github.io/tags/paper/"/>
     
   </entry>
   
