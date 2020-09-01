@@ -96,6 +96,126 @@ ga('send', 'pageview');
         <div class="col-sm-8 blog-main">
           
   
+    <article id="post-unplug-learning" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/27/unplug-learning/">不插电学习法</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2019/01/27/unplug-learning/" class="article-date"><time datetime="2019-01-28T03:22:31.000Z" itemprop="datePublished">2019-01-27</time></a>
+</div>
+
+    
+    
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>可能是由于自己本科时经常去图书馆养成的学习习惯，发现自己在安静的、<strong>大家都在学习的</strong>环境下效率会更高。如果处于一个封闭的独处空间或者开放的办公室空间，在无deadline的情况下，很难进行长时间的专注。</p>
+<p>不插电学习法，表示一个<strong>0）不携带手机，1）不联接网，2）不插电</strong>的工作学习方法，对于写作，写代码这种不太需要信息获取的工作效率提升明显（实验样本目前只有自己）。</p>
+<p><code>不联网即完全隔绝网络上的信息，保持一个无人打扰的状态。</code>没有email，没有sns，没有娱乐网站。如果进行编程的话，可以使用离线文档, 如<a href="https://kapeli.com/dash" target="_blank" rel="noopener">dash</a>。因为编程大多数时候bug是不需要从网上寻找解决方法的，同时对于自己的写bug能力也有提升。</p>
+<p><code>不插电是为了保持合理的工作休息时间。</code>对于一个老mac用户，不插电电脑可使用4.5小时左右（屏幕亮度在90%以上）。电量每下降30%左右可以休息一首歌的时间（保护视力）。这个方法和番茄工作法的区别之处是保持了更久的工作时间。在电量15%左右时返回一个有手机有网的环境（保护电脑的电池）。这个时候已经应该高效地工作了3个多小时，完成了一个battery time。如果一天能完成两个battery time，那就已经非常高效了。</p>
+<p>在办公室的时候可以去楼下的study room或者library，需要和colleague讨论的时候返回实验室去讨论一番。在家也可以去小区的公开study room，效果比在家/实验室效率会高很多。</p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="https://byshen.github.io/2019/01/27/unplug-learning/" data-id="ckejgyu0q000vph8g3wsxygnj" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/research/">research</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-union-find" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/25/union-find/">Disjoint-set (union find)</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2018/11/25/union-find/" class="article-date"><time datetime="2018-11-25T19:50:03.000Z" itemprop="datePublished">2018-11-25</time></a>
+</div>
+
+    
+    
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h3><p>Assume we initialize each node’s parent is itself. <code>root[i] = i</code></p>
+<p>Union operation is just to set one root to be a child of another root.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">union_root</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> r1 = find_root(x);</span><br><span class="line">    <span class="keyword">int</span> r2 = find_root(y);</span><br><span class="line">    <span class="keyword">if</span> (r1 != r2) &#123;</span><br><span class="line">        root[r1] = r2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Find"><a href="#Find" class="headerlink" title="Find"></a>Find</h3><p>The plain version is to find root of its parent until its parent is itself.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find_root</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x!=root[x]) &#123;</span><br><span class="line">        <span class="keyword">return</span> find_root(root[x]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> root[x];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Path compression (No reason not to use.)</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find_root</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x!=root[x]) &#123;</span><br><span class="line">        root[x] = find_root(root[x]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> root[x];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>or<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find_root</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (x!=root[x]) &#123;</span><br><span class="line">        root[x] = root[root[x]];</span><br><span class="line">        x = root[x];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> root[x];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li><a href="https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf" target="_blank" rel="noopener">princeton slide</a></li>
+</ol>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="https://byshen.github.io/2018/11/25/union-find/" data-id="ckejgyu0p000tph8gbp6sy0ba" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-characteristic-study" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
@@ -177,7 +297,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/27/characteristic-study/" data-id="ckbqrrpyf0008x08g47d3qcec" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/27/characteristic-study/" data-id="ckejgyu000006ph8gt6vsv8kw" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -249,7 +369,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/22/paper-learn-from-mistakes/" data-id="ckbqrrpyp000gx08gkmxe3wj0" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/22/paper-learn-from-mistakes/" data-id="ckejgyu0e000kph8gsgem85hf" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -305,7 +425,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/22/yylessons/" data-id="ckbqrrpzg001zx08g095iky2p" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/22/yylessons/" data-id="ckejgyu0s000zph8g1wovon4b" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -365,7 +485,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/18/kmp/" data-id="ckbqrrpye0005x08gstqv1tyz" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/18/kmp/" data-id="ckejgyu0b000gph8g2fvfa3oe" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -467,7 +587,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/13/research-links/" data-id="ckbqrrpyu000nx08g52wiyjw7" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/13/research-links/" data-id="ckejgyu0m000pph8glzle5u7v" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -539,7 +659,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/11/nachos/" data-id="ckbqrrpyj000dx08gjskfd4r6" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/11/nachos/" data-id="ckejgyu0k000nph8gwcbhalh7" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -638,7 +758,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/08/10/paper-pres-note/" data-id="ckbqrrpyr000ix08g2t4lnsjp" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/08/10/paper-pres-note/" data-id="ckejgyu0j000lph8gizuthvt8" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -697,7 +817,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/07/28/android-develop/" data-id="ckbqrrpxw0000x08gwfnhwjrl" class="article-share-link">
+      <a data-url="https://byshen.github.io/2018/07/28/android-develop/" data-id="ckejgytzs0002ph8g3db05waf" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -713,79 +833,10 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <header class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-
-  </header>
-
-  <div class="article-meta">
-    <div class="article-datetime">
-  <a href="/2018/07/28/hello-world/" class="article-date"><time datetime="2018-07-29T01:02:58.755Z" itemprop="datePublished">2018-07-28</time></a>
-</div>
-
-    
-    
-
-  </div>
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<div class="bs-callout bs-callout-info"><p>This is some callout content</p>
-</div>
-<div class="bs-callout bs-callout-primary"><p>This is some callout content</p>
-</div>
-<div class="bs-callout bs-callout-success"><p>This is some callout content</p>
-</div>
-<div class="bs-callout bs-callout-warning"><p>This is some callout content</p>
-</div>
-<div class="bs-callout bs-callout-warning"><p>This is some callout content</p>
-</div>
-
-      
-    </div>
-
-    
-      
-
-    
-
-    <footer class="article-footer">
-      <a data-url="https://byshen.github.io/2018/07/28/hello-world/" data-id="ckbqrrpyc0004x08gk7oi5np8" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <div id="page-nav">
-    <nav><ul class="pagination"><li><a class="page-prev" rel="prev" href="/"><i class="fa fa-chevron-left"></i> Prev</a></li><li><a class="page-number" href="/">1</a></li><li class="active"><span class="page-number">2</span></li><li class="disabled"><span class="page-next">Next <i class="fa fa-chevron-right"></i></a></li></ul></nav>
+    <nav><ul class="pagination"><li><a class="page-prev" rel="prev" href="/"><i class="fa fa-chevron-left"></i> Prev</a></li><li><a class="page-number" href="/">1</a></li><li class="active"><span class="page-number">2</span></li><li><a class="page-number" href="/page/3/">3</a></li><li><a class="page-next" rel="next" href="/page/3/">Next <i class="fa fa-chevron-right"></i></a></li></ul></nav>
   </div>
 
 
@@ -806,6 +857,14 @@ ga('send', 'pageview');
     <ul class="sidebar-module-list">
       
         <li>
+          <a href="/2020/08/31/health/">Health notes</a>
+        </li>
+      
+        <li>
+          <a href="/2020/07/16/mingyan/">Quotes</a>
+        </li>
+      
+        <li>
           <a href="/2020/06/21/reflect-on-paper-submission/">一些论文 Tips</a>
         </li>
       
@@ -815,14 +874,6 @@ ga('send', 'pageview');
       
         <li>
           <a href="/2020/04/03/asplos20/">Some notes on ASPLOS&#39;20</a>
-        </li>
-      
-        <li>
-          <a href="/2020/03/21/听爸爸的话/">听爸爸的话</a>
-        </li>
-      
-        <li>
-          <a href="/2019/09/15/Intern-in-the-Bay-Area/">Intern Life in the Bay Area</a>
         </li>
       
     </ul>
@@ -852,7 +903,7 @@ ga('send', 'pageview');
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/06/">June 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/05/">May 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/04/">April 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/03/">March 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/09/">September 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/06/">June 2019</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/03/">March 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/01/">January 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/11/">November 2018</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/08/">August 2018</a><span class="sidebar-module-list-count">7</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/07/">July 2018</a><span class="sidebar-module-list-count">2</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/08/">August 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/07/">July 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/06/">June 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/05/">May 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/04/">April 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2020/03/">March 2020</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/09/">September 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/06/">June 2019</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/03/">March 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/01/">January 2019</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/11/">November 2018</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/08/">August 2018</a><span class="sidebar-module-list-count">7</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/07/">July 2018</a><span class="sidebar-module-list-count">2</span></li></ul>
   </div>
 
 
